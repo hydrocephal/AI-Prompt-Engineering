@@ -1,0 +1,42 @@
+Input:
+
+You are a precise scientific summarizer. Your job is to translate scientific news into concise summaries in English that preserve accuracy and key meaning
+Request:
+Scientists from Pusan National University (South Korea) reported the creation of a unique crystal capable of absorbing and releasing oxygen, mimicking the function of lungs. Unlike most known materials, it remains stable at room temperature and in a normal environment, which makes it suitable for practical use. Moreover, the crystal can be reused multiple times without losing efficiency. Researchers note that the crystal’s operation is based on a special lattice structure that changes its state when interacting with oxygen. This opens up new opportunities for applications such as fuel cells, air purification systems, and even “smart” windows that can regulate indoor oxygen levels. According to the authors, this is only the first step, and in the future such materials could become the foundation for an entire class of devices based on controlled gas exchange.
+Summary:
+Scientists in South Korea have created a crystal that can repeatedly absorb and release oxygen at room temperature without losing its properties. Its function relies on a unique lattice that changes state upon interacting with oxygen, making it promising for fuel cells, air purification, and smart oxygen-regulating systems, paving the way for new gas-exchange technologies.
+Request:
+A group of engineers has introduced a technology that allows small electronic devices to be powered not only by sunlight but also by artificial indoor light. The development is based on advanced photovoltaic elements that efficiently convert light from lamps and other sources into electricity. This enables the creation of autonomous gadgets that no longer require batteries or constant recharging. The key advantage of this technology is that it reduces dependence on traditional batteries, whose production and disposal are linked to environmental risks. The developers believe the new elements will find applications in IoT devices, sensors, wearable electronics, and medical gadgets. If successfully brought into mass production, the technology could significantly reshape the market — especially in the segment of miniature electronics, where frequent battery replacement is inconvenient and costly.
+Summary:
+Engineers developed photovoltaic elements that efficiently convert both solar and artificial light into electricity, allowing small electronics to operate without batteries or charging. The technology reduces environmental impact and is particularly promising for IoT devices, sensors, wearables, and medical electronics, potentially transforming the miniature gadget market.
+Request:
+Scientists have discovered a giant deep-sea hydrothermal system in the Pacific Ocean, off the western coast of New Guinea, named “Kunlun.” According to research published in Science Advances, the system covers about 11.1 km² and includes 20 large craters, some over a kilometer in diameter — making it far larger and more unusual than known systems on mid-ocean ridges. It features a unique hydrogen generation mechanism, which not only challenges existing geological theories but also forces a rethinking of Earth’s underwater activity.
+Using Kunlun’s unique geochemical conditions, scientists found a deep-sea ecosystem with crustaceans, sea anemones, and tubeworms that rely on chemosynthesis (metabolism without light or organic matter). Such ecosystems resemble those where life could have originated on Earth, offering a new perspective on life’s origins. The scale and stability of the system, as well as the diversity of organisms living in total darkness, make Kunlun an extremely important discovery for geologists, biologists, and researchers of life’s beginnings.
+
+Output:
+
+Scientists have discovered a massive deep-sea hydrothermal system, “Kunlun,” off western New Guinea, spanning 11.1 km² with 20 large craters, some over 1 km wide. Its unusual hydrogen-generating processes challenge current geological models. The system hosts a diverse chemosynthetic ecosystem—including crustaceans, sea anemones, and tubeworms—that survives without light, providing insights into early-Earth life and highlighting Kunlun’s significance for geology, biology, and studies of life’s origins.
+
+
+
+API integration template:
+
+
+{
+  "model": "gpt-5",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a precise scientific summarizer. Your job is to translate scientific news into concise summaries in English that preserve accuracy and key meaning."
+    },
+    {
+      "role": "user",
+      "content": "Request: Scientists from Pusan National University (South Korea) reported the creation of a unique crystal capable of absorbing and releasing oxygen, mimicking the function of lungs. Unlike most known materials, it remains stable at room temperature and in a normal environment, which makes it suitable for practical use. Moreover, the crystal can be reused multiple times without losing efficiency. Researchers note that the crystal’s operation is based on a special lattice structure that changes its state when interacting with oxygen. This opens up new opportunities for applications such as fuel cells, air purification systems, and even “smart” windows that can regulate indoor oxygen levels. According to the authors, this is only the first step, and in the future such materials could become the foundation for an entire class of devices based on controlled gas exchange.\n\nSummary: Scientists in South Korea have created a crystal that can repeatedly absorb and release oxygen at room temperature without losing its properties. Its function relies on a unique lattice that changes state upon interacting with oxygen, making it promising for fuel cells, air purification, and smart oxygen-regulating systems, paving the way for new gas-exchange technologies.\n\n---\n\nRequest: A group of engineers has introduced a technology that allows small electronic devices to be powered not only by sunlight but also by artificial indoor light. The development is based on advanced photovoltaic elements that efficiently convert light from lamps and other sources into electricity. This enables the creation of autonomous gadgets that no longer require batteries or constant recharging. The key advantage of this technology is that it reduces dependence on traditional batteries, whose production and disposal are linked to environmental risks. The developers believe the new elements will find applications in IoT devices, sensors, wearable electronics, and medical gadgets. If successfully brought into mass production, the technology could significantly reshape the market — especially in the segment of miniature electronics, where frequent battery replacement is inconvenient and costly.\n\nSummary: Engineers developed photovoltaic elements that efficiently convert both solar and artificial light into electricity, allowing small electronics to operate without batteries or charging. The technology reduces environmental impact and is particularly promising for IoT devices, sensors, wearables, and medical electronics, potentially transforming the miniature gadget market.\n\n---\n\nRequest: Scientists have discovered a giant deep-sea hydrothermal system in the Pacific Ocean, off the western coast of New Guinea, named “Kunlun.” According to research published in Science Advances, the system covers about 11.1 km² and includes 20 large craters, some over a kilometer in diameter — making it far larger and more unusual than known systems on mid-ocean ridges. It features a unique hydrogen generation mechanism, which not only challenges existing geological theories but also forces a rethinking of Earth’s underwater activity.\n\nUsing Kunlun’s unique geochemical conditions, scientists found a deep-sea ecosystem with crustaceans, sea anemones, and tubeworms that rely on chemosynthesis (metabolism without light or organic matter). Such ecosystems resemble those where life could have originated on Earth, offering a new perspective on life’s origins. The scale and stability of the system, as well as the diversity of organisms living in total darkness, make Kunlun an extremely important discovery for geologists, biologists, and researchers of life’s beginnings."
+    }
+  ],
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "max_tokens": 1200,
+  "frequency_penalty": 0.1,
+  "presence_penalty": 0
+}
